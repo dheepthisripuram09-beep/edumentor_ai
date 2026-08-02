@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-surface-light dark:bg-surface-dark backdrop-blur-md border border-white/20 dark:border-slate-700/50 shadow-xl;
+  }
+  
+  .glass-panel-hover {
+    @apply hover:bg-white/80 dark:hover:bg-slate-800/80 transition-all duration-300;
+  }
+}
+
+/* Custom Scrollbar for chat and pages */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
